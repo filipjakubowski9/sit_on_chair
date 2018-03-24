@@ -136,6 +136,12 @@ nav {
     text-align: center;
 }
 
+.navbar > li > a:link, .navbar > li > a:visited,
+.navbar > li > a:hover, .navbar > li > a:active {
+    color: #ffffff;
+    text-decoration: none;
+}
+
 .dropdown_menu {
     display: flex;
     order: 1;
@@ -242,6 +248,11 @@ h1 span {
     padding: 3px 0 0 20px;
     font-family: "ralewaymedium";
     text-transform: uppercase;
+}
+
+#button a:link, #button a:visited,
+#button a:hover, #button a:active {
+    text-decoration: none;
 }
 
 #right_slide {
@@ -449,4 +460,45 @@ h1 span {
     font-size: 16px;
 	position: absolute;
 	bottom: 20px;
+}
+
+/* CSS DO SEKCJI 3 (HOVER) */
+
+.tariff_box:hover {
+    background-color: #25cab1;
+    border-color: #25cab1;
+}
+
+.tariff_box:hover .small_circle {
+    background-color: #25cab1;
+    border-color: #25cab1;
+}
+
+.tariff_box:hover .small_circle>div {
+    background-color: #ffffff;
+}
+
+.tariff_box:hover h3 {
+    color: #ffffff;
+}
+
+.tariff_box:hover .big_circle {
+    border-color: #25cab1;
+}
+
+.tariff_box:hover .big_circle p {
+    color: #25cab1;
+}
+
+.tariff_box:hover .offer div:nth-of-type(2n + 1) {
+    background-color: #ffffff;
+}
+
+.tariff_box:hover .offer div:nth-of-type(2n + 2) {
+    background-color: #ececec;
+}
+
+.tariff_box:hover .join_button {
+    background-color: #ffffff;
+    color: #25cab1;
 }
