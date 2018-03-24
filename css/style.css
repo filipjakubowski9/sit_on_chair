@@ -178,6 +178,7 @@ nav {
 }
 
 .black_chair>div {
+    padding-bottom: 5px;
     margin-top: 65px;
     display: flex;
     align-items: center;
@@ -203,7 +204,7 @@ nav {
     flex-direction: column;
     position: relative;
     right: 130px;
-    bottom: 30px;
+    bottom: 25px;
 }
 
 h1 {
@@ -258,12 +259,7 @@ h1 span {
     padding: 0;
 }
 
-.clair>img {
-    width: 330px;
-    height: 225px;
-}
-
-.margarita>img {
+.clair_margarita img {
     width: 330px;
     height: 225px;
 }
@@ -273,12 +269,12 @@ h1 span {
     height: 255px;
     border: 1px solid lightgrey;
     font-family: "ralewaymedium";
-    padding: 30px 20px 30px 20px;
+    padding: 30px 15px 0 25px;
 }
 
 .clair_margarita>div {
     display: flex;
-    padding: 30px 65px 0 55px;
+    padding: 28px 65px 5px 55px;
 }
 
 .clair_margarita h2 {
@@ -294,8 +290,8 @@ h1 span {
 
 .find_inputs h2 {
     position: relative;
-    bottom: 1px;
-    margin-bottom: 15px;
+    bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .shadow {
@@ -310,4 +306,147 @@ h1 span {
     font-size: 14px;
     color: #808080;
     line-height: 20px;
+    padding: 1px 0;
+}
+
+/* CSS DO SEKCJI 3 */
+
+.price_list>div{
+    background-color: #f4f4f4;
+    display: flex;
+}
+
+.price_list h2{
+    text-align: left;
+    font-family: "ralewayregular";
+    font-size: 21px;
+    line-height: 35px;
+    padding-top: 42px;
+    margin-left: 67px;
+    width: 320px;
+    border-bottom: 7px solid #25cab1;
+    margin-bottom: 75px;
+}
+
+.tariff_box:first-of-type {
+    margin-left: 67px;
+}
+
+.tariff_box:last-of-type {
+    margin-right: 82px;
+}
+
+.tariff_box {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 329px;
+	height: 500px;
+	border: 2px solid #e0e0e0;
+	background-color: #f9f9f9;
+	text-align: center;
+	position: relative;
+	z-index: 3;
+}
+
+.small_circle {
+	width: 57px;
+	height: 57px;
+	border-radius: 50%;
+	border: 2px solid #e0e0e0;
+	background-color: #ffffff;
+	position: relative;
+	bottom: 38px;
+	z-index: 1;
+}
+
+.small_circle>div {
+	width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #c2c2c2;
+	position: absolute;
+	z-index: 2;
+	top: 14px;
+	left: 14px;
+}
+
+.tariff_box h3 {
+	font-size: 24px;
+    font-family: "ralewaylight";
+    text-align: center;
+    color: #25cab1;
+	position: relative;
+	bottom: 30px;
+}
+
+.big_circle {
+	width: 129px;
+	height: 129px;
+	border-radius: 50%;
+	border: 2px solid #e0e0e0;
+	background-color: #ffffff;
+	position: relative;
+    bottom: 5px
+}
+
+.big_circle p:first-child {
+	color: #c2c2c2;
+	font-family: "ralewaybold";
+	font-size: 44px;
+	position: relative;
+	left: 5px;
+    top: 25px;
+}
+
+.big_circle sup {
+	font-size: 16px;
+	position: relative;
+	bottom: 10px;
+}
+
+.adv_plan_price{
+    left: -3px !important
+}
+
+.big_circle p:last-child {
+	color: #c2c2c2;
+	font-family: "ralewaybold";
+	font-size: 15px;
+	position: relative;
+    top: 30px;
+}
+
+.offer div {
+	width: 326px;
+	font-size: 24px;
+	font-family: "ralewayregular";
+	position: relative;
+	top: 33px;
+}
+
+.offer div:nth-of-type(2n + 1) {
+	height: 42px;
+	line-height: 42px;
+	background-color: #e4e4e4;
+	color: #949494;
+}
+
+.offer div:nth-of-type(2n + 2) {
+	height: 44px;
+	line-height: 44px;
+	background-color: #f1f1f1;
+	color: #7b7b7b;
+}
+
+.join_button {
+	width: 124px;
+    height: 33px;
+    line-height: 33px;
+    border-radius: 8px;
+	background-color: #25cab1;
+    color: #ffffff;
+    font-size: 16px;
+	position: absolute;
+	bottom: 20px;
 }
