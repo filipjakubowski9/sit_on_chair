@@ -89,29 +89,31 @@
 
 /* KLASA DO WYŚRODKOWANIA ZAWARTOŚCI */
 .container {
-    max-width: 1200px;
+    max-width: 1050px;
     margin: 0 auto;
-/*    border: 1px solid red; */
 }
 
 /* CSS DO NAGŁÓWKA */
 header {
     width: 100%;
-    background-color: #000000;
     height: 40px;
+    background-color: #000000;
+    font-size: 14px;
     font-family: 'ralewaybold';
-    color: #ffffff;
+    letter-spacing: 0.5px;
     line-height: 40px;
+    color: #ffffff;
 }
 
 header div {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: row;
 }
 
 header p {
-    font-size: 15px;
-    margin-left: 67px;
+    margin: 0;
+    margin-right: 605px;
+    cursor: pointer;
 }
 
 header span {
@@ -119,9 +121,11 @@ header span {
 }
 
 nav {
-    margin-right: 55px;
-    font-size: 14px;
-    letter-spacing: 0.5px;
+    width: 33%;
+    margin: 0;
+    padding-left: 10px;
+    position: relative;
+    left: 30px;
     color: #ffffff;
 }
 
@@ -137,39 +141,55 @@ nav {
 }
 
 .navbar > li > a:link, .navbar > li > a:visited,
-.navbar > li > a:hover, .navbar > li > a:active {
+.navbar > li > a:active {
     color: #ffffff;
     text-decoration: none;
 }
 
+.navbar > li > a:hover {
+    color: #25cab1;
+}
+
 .dropdown_menu {
-    display: flex;
+    display: none;
     order: 1;
-    background-color: black;
+    width: 120px;
+    height: 100px;
+    margin: 0;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    background-color: #000000;
     font-family: "ralewaymedium";
-    margin: 10px;
-    padding: 7px 0;
-    padding-left: 12px
+}
+
+.dropdown_menu ul {
+    margin: 0;
+    padding-left: 10px;
+    padding-top: 10px;
+    position: relative;
+    bottom: 40px;
 }
 
 .dropdown_menu li {
-    list-style: none;
     width: 100%;
+    list-style: none;
     letter-spacing: 1px;
     line-height: 2em;
     text-align: left;
-    position: relative;
 }
 
-.dropdown_menu::after {
+.dropdown_menu::before {
     content: " ";
     width: 0;
     height: 0;
+    padding-top: 0;
     position: relative;
+    left: 45px;
+    bottom: 35px;
     border: 10px solid transparent;
+    border-top: 0;
     border-bottom-color: #000000;
-    bottom: 26px;
-    right: 55px;
 }
 
 /* CSS DO SEKCJI 1 */
@@ -185,33 +205,53 @@ nav {
 }
 
 .black_chair>div {
-    padding-bottom: 5px;
-    margin-top: 65px;
     display: flex;
     align-items: center;
+    margin-top: 65px;
+    padding-bottom: 5px;
 }
 
-#left_slide {
+.arrow {
+    position: relative;
+    z-index: 2;
+    bottom: 30px;
     font-family: "ralewaylight";
     color: #25cab1;
     font-size: 80px;
-    position: relative;
-    left: 75px;
-    bottom: 30px;
+}
+
+.arrow a:link, .arrow a:visited,
+.arrow a:hover, .arrow a:active {
+    color: #25cab1;
+    text-decoration: none;
 }
 
 .black_chair img {
     width: 600px;
+    height: 430px;
+    z-index: 1;
     position: relative;
-    right: 15px;
+    right: 85px;
+}
+
+.slider ul {
+    list-style: none;
+}
+
+.slider li {
+    display: none;
+}
+
+.slider .visible {
+    display: block;
 }
 
 .beside_black_chair {
     display: flex;
     flex-direction: column;
     position: relative;
-    right: 130px;
-    bottom: 25px;
+    right: 125px;
+    bottom: 15px;
 }
 
 h1 {
@@ -225,8 +265,11 @@ h1 span {
 }
 
 .beside_black_chair p {
-    max-width: 85%;
-    padding: 30px 0;
+    width: 115%;
+    padding: 40px 0;
+    position: relative;
+    bottom: 13px;
+    right: 30px;
     color: #4d4d4d;
     font-family: "ralewaymedium";
     font-size: 15px;
@@ -237,32 +280,24 @@ h1 span {
 #button {
     width: 265px;
     height: 50px;
+    position: relative;
+    bottom: 20px;
     background-color: #25cab1;
     border-radius: 10px;
-    box-sizing: border-box;
 }
 
 #button p {
+    padding: 13px 0 0 40px;
     color: #ffffff;
+    font-family: "ralewaymedium";
     font-size: 24px;
     line-height: 50px;
-    padding: 3px 0 0 20px;
-    font-family: "ralewaymedium";
     text-transform: uppercase;
 }
 
 #button a:link, #button a:visited,
 #button a:hover, #button a:active {
     text-decoration: none;
-}
-
-#right_slide {
-    font-family: "ralewaylight";
-    color: #25cab1;
-    font-size: 80px;
-    position: relative;
-    right: 80px;
-    bottom: 30px;
 }
 
 /* CSS DO SEKCJI 2 */
@@ -279,46 +314,62 @@ h1 span {
 .find_inputs {
     width: 340px;
     height: 255px;
+    margin-bottom: 60px;
+    padding: 5px 10px 0 25px;
     border: 1px solid lightgrey;
     font-family: "ralewaymedium";
-    padding: 30px 15px 0 25px;
 }
 
 .clair_margarita>div {
     display: flex;
-    padding: 28px 65px 5px 55px;
+    margin-top: 25px;
+    margin-bottom: 10px;
 }
 
 .clair_margarita h2 {
-    font-size: 16px;
-    font-family: "ralewaysemibold";
     width: 140px;
-    border-bottom: 7px solid #25cab1;
+    z-index: 2;
     position: relative;
     right: 80px;
-    bottom: 65px;
-    z-index: 2;
+    top: 10px;
+    border-bottom: 7px solid #25cab1;
+    font-size: 16px;
+    font-family: "ralewaysemibold";
 }
 
-.find_inputs h2 {
-    position: relative;
-    bottom: 5px;
-    margin-bottom: 10px;
+.clair {
+    margin: 0;
+    margin-right: 27px;
+    max-width: 330px;
+    max-height: 225px;
+}
+
+.margarita {
+    margin-right: 28px;
+    max-width: 330px;
+    max-height: 225px;
 }
 
 .shadow {
     width: 330px;
     height: 60px;
-    background-color: rgba(255,255,255,0.5);
     position: relative;
-    bottom: 105px;
+    bottom: 75px;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.find_inputs h2 {
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    top: 5px;
 }
 
 .find_inputs p {
     font-size: 14px;
     color: #808080;
     line-height: 20px;
-    padding: 1px 0;
 }
 
 /* CSS DO SEKCJI 3 */
@@ -332,93 +383,90 @@ h1 span {
 }
 
 .price_list h2, contact_form h2 {
-    text-align: left;
+    width: 320px;
+    margin: 0;
+    margin-bottom: 75px;
+    padding-top: 42px;
+    border-bottom: 7px solid #25cab1;
     font-family: "ralewayregular";
     font-size: 21px;
     line-height: 35px;
-    padding-top: 42px;
-    margin-left: 67px;
-    width: 320px;
-    border-bottom: 7px solid #25cab1;
-    margin-bottom: 75px;
-}
-
-.tariff_box:first-of-type {
-    margin-left: 67px;
-}
-
-.tariff_box:last-of-type {
-    margin-right: 82px;
+    text-align: left;
 }
 
 .tariff_box {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	width: 329px;
-	height: 500px;
+    height: 500px;
+    margin: 0;
+    margin-bottom: 65px;
+    z-index: 3;
+    position: relative;
 	border: 2px solid #e0e0e0;
 	background-color: #f9f9f9;
 	text-align: center;
-	position: relative;
-	z-index: 3;
-    margin-bottom: 65px;
+}
+
+.tariff_box:nth-of-type(2) {
+    margin-left: 29px;
+    margin-right: 29px;
 }
 
 .small_circle {
 	width: 57px;
 	height: 57px;
+    z-index: 1;
+    position: relative;
+    bottom: 38px;
 	border-radius: 50%;
 	border: 2px solid #e0e0e0;
 	background-color: #ffffff;
-	position: relative;
-	bottom: 38px;
-	z-index: 1;
 }
 
 .small_circle>div {
 	width: 26px;
     height: 26px;
-    border-radius: 50%;
-    background-color: #c2c2c2;
+    z-index: 2;
 	position: absolute;
-	z-index: 2;
 	top: 14px;
 	left: 14px;
+    border-radius: 50%;
+    background-color: #c2c2c2;
 }
 
 .tariff_box h3 {
+    position: relative;
+    bottom: 30px;
 	font-size: 24px;
     font-family: "ralewaylight";
-    text-align: center;
     color: #25cab1;
-	position: relative;
-	bottom: 30px;
+    text-align: center;
 }
 
 .big_circle {
 	width: 129px;
 	height: 129px;
+    position: relative;
+    bottom: 5px;
 	border-radius: 50%;
 	border: 2px solid #e0e0e0;
 	background-color: #ffffff;
-	position: relative;
-    bottom: 5px
 }
 
 .big_circle p:first-child {
-	color: #c2c2c2;
+    position: relative;
+    left: 5px;
+    top: 25px;
 	font-family: "ralewaybold";
 	font-size: 44px;
-	position: relative;
-	left: 5px;
-    top: 25px;
+    color: #c2c2c2;
 }
 
 .big_circle sup {
-	font-size: 16px;
 	position: relative;
 	bottom: 10px;
+    font-size: 16px;
 }
 
 .adv_plan_price{
@@ -426,45 +474,46 @@ h1 span {
 }
 
 .big_circle p:last-child {
-	color: #c2c2c2;
+    position: relative;
+    top: 30px;
 	font-family: "ralewaybold";
 	font-size: 15px;
-	position: relative;
-    top: 30px;
+    color: #c2c2c2;
 }
 
 .offer div {
 	width: 326px;
-	font-size: 24px;
-	font-family: "ralewayregular";
 	position: relative;
 	top: 33px;
+    font-family: "ralewayregular";
+    font-size: 24px;
 }
 
 .offer div:nth-of-type(2n + 1) {
 	height: 42px;
+    background-color: #e4e4e4;
+    color: #949494;
 	line-height: 42px;
-	background-color: #e4e4e4;
-	color: #949494;
 }
 
 .offer div:nth-of-type(2n + 2) {
 	height: 44px;
-	line-height: 44px;
 	background-color: #f1f1f1;
 	color: #7b7b7b;
+    line-height: 44px;
 }
 
 .join_button {
 	width: 124px;
     height: 33px;
-    line-height: 33px;
+    position: absolute;
+    bottom: 20px;
+    background-color: #25cab1;
     border-radius: 8px;
-	background-color: #25cab1;
-    color: #ffffff;
     font-size: 16px;
-	position: absolute;
-	bottom: 20px;
+    line-height: 33px;
+    color: #ffffff;
+    cursor: pointer;
 }
 
 /* CSS DO SEKCJI 3 (HOVER) */
@@ -507,22 +556,262 @@ h1 span {
     color: #25cab1;
 }
 
-/* === CSS DO SEKCJI 4 (FORMULARZ) === */
+/* CSS DO SEKCJI 4 (KALKULATOR) */
+.application {
+  background-color: #f9f9f9;
+  padding: 30px 0;
+}
+
+.application h3 {
+  color: #575757;
+  font-size: 18px;
+}
+
+.application header.align_right {
+  text-align: right;
+}
+
+.application header {
+    background: none;
+}
+
+.inline {
+  display: inline-block;
+  width: 347px;
+  padding: 14px;
+  vertical-align: top;
+}
+
+.form {
+  margin-top: 50px;
+}
+
+.drop_down_list {
+  border: 1px solid #8de0d2;
+  width: 280px;
+  height: 38px;
+  background-color: #ffffff;
+  margin-top: 22px;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.list_label {
+  font-size: 22px;
+  color: #e2e2e2;
+  font-family: 'ralewaylight';
+}
+
+.checkbox {
+  position: relative;
+  padding: 30px 30px 30px 0;
+}
+
+.checkbox input {
+  display: block;
+  opacity: 0;
+  height: 48px;
+  position: absolute;
+  width: 48px;
+  cursor: pointer;
+}
+
+.checkbox label {
+  display: block;
+  padding-left: 65px;
+  position: relative;
+  font-size: 28px;
+  color: #cecece;
+  line-height: 120%;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.checkbox label::before, .checkbox label::after {
+  border: 1px solid #25cab1;
+  content: "";
+  display: block;
+  left: 0;
+  height: 48px;
+  position: absolute;
+  width: 48px;
+  top: 0;
+}
+
+.checkbox label::after {
+  background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2233.875%22%20height%3D%2233%22%20viewBox%3D%220%200%2033.875%2033%22%3E%0A%20%20%3Cpath%20d%3D%22M9.470%2C15.209%20L14.061%2C24.104%20C14.061%2C24.104%2021.522%2C6.026%2033.287%2C-0.000%20C33.000%2C4.304%2031.852%2C8.035%2033.861%2C12.626%20C28.696%2C13.774%2018.078%2C26.687%2014.635%2C33.000%20C9.756%2C26.974%204.017%2C22.382%20-0.000%2C20.948%20L9.470%2C15.209%20Z%22%20fill%3D%22%2327c7ab%22/%3E%0A%3C/svg%3E%0A") no-repeat center;
+  border: 0;
+  display: none;
+}
+
+.checkbox input:checked + label::after {
+  display: block;
+}
+
+.active {
+  background: url('../images/form_ok.jpg');
+  width: 48px;
+  height: 40px;
+
+}
+
+.inline_text {
+  display: inline-block;
+  width: 228px;
+  vertical-align: top;
+  margin-top: 30px;
+  margin-left: 15px;
+  color: #aeaeae;
+}
+
+.image_part img{
+  margin-top: 110px;
+  margin-left: 38px;
+}
+
+.application .green_bell {
+  background-color: #25cab1;
+  width: 200px;
+  height: 6px;
+  display: inline-block;
+  margin: 5px 0 5px 0;
+}
+
+.summary_panel {
+  background-color: #ffffff;
+  width: 100%;
+  height: 195px;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.application .green_button {
+  background-color: #25cab1;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  width: 200px;
+  padding: 10px 30px;
+  font-size: 24px;
+  display: inline-block;
+  font-family: 'ralewaymedium';
+  margin-top: 20px;
+  margin-left: 29px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.panel_left {
+  display: inline-block;
+  width: 185px;
+  vertical-align: top;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e7e7e7;
+  height: 135px;
+}
+
+.panel_right {
+  display: inline-block;
+  width: 100px;
+  border-left: 1px solid #e7e7e7;
+  text-align: right;
+  vertical-align: top;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e7e7e7;
+  height: 135px;
+}
+
+.panel_left h4 , .panel_right h4{
+  color: #25cab1;
+  font-size: 23px;
+  padding-bottom: 5px;
+}
+
+.panel_left span{
+  margin-top: 7px;
+  font-size: 22px;
+  color: #5b5a5a;
+  display: block;
+}
+
+.panel_right span {
+  display: block;
+  font-size: 22px;
+  color: #25cab1;
+  margin-top: 7px;
+}
+
+.sum_label{
+  display: inline-block;
+  width: 185px;
+  margin-top: 10px;
+  font-size: 22px;
+  color: #5b5a5a;
+}
+
+.sum {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+  margin-top: 10px;
+  font-size: 22px;
+  color: #25cab1;
+}
+
+.list_arrow {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #25cab1;
+  display: block;
+  position: absolute;
+  right: 14px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.list_panel {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  width: 288px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  list-style: none;
+  margin: 0;
+  left: 0px;
+  z-index: 2;
+  position: absolute;
+  top: 54px;
+  display: none;
+}
+
+.list_panel li {
+  margin-top: 10px;
+  cursor: pointer;
+  color: #585858;
+}
+
+.title {
+  height: 30px;
+}
+
+/* CSS DO SEKCJI 5 (FORMULARZ) */
 .contact_form {
     width: 100%;
     background-color: #ffffff;
 }
 
 .contact_form h2 {
-    text-align: left;
+    width: 320px;
+    margin-top: 28px;
+    margin-bottom: 47px;
+    margin-left: 5px;
+    border-bottom: 7px solid #25cab1;
     font-family: "ralewayregular";
     font-size: 21px;
+    text-align: left;
     line-height: 35px;
-    width: 320px;
-    border-bottom: 7px solid #25cab1;
-    margin-top: 30px;
-    margin-bottom: 47px;
-    margin-left: 73px;
 }
 
 form {
@@ -533,7 +822,7 @@ form>div:first-of-type {
     display: flex;
     flex-direction: column;
     width: 633px;
-    margin-left: 73px;
+    margin-left: 5px;
 }
 
 form>div:last-of-type {
@@ -544,12 +833,12 @@ form>div:last-of-type {
 
 input, textarea {
     width: 100%;
-    border: 1px solid #25cab1;
     margin-bottom: 25px;
+    padding-left: 15px;
+    border: 1px solid #25cab1;
     font-family: "ralewayregular";
     font-size: 32px;
     color: #25cab1;
-    padding-left: 15px;
 }
 
 form>div:first-of-type input {
@@ -575,62 +864,64 @@ input:focus, textarea:focus {
     width: 260px;
     position: relative;
     bottom: 25px;
-    right: 55px
+    right: 5px;
 }
 
-.checkbox {
+.form_checkbox {
     display: flex;
     position: relative;
-    top: 7px;
-    right: 38px;
-    margin-bottom: 43px;
+    bottom: 7px;
+    left: 7px;
+    margin-bottom: 25px;
 }
 
-.checkbox input {
+.form_checkbox input {
     display: none;
 }
 
-.checkbox input+div {
+.form_checkbox input+div {
     width: 48px;
     height: 48px;
     border: 1px solid #25cab1;
     background-color: #ffffff;
+    cursor: pointer;
 }
 
-.checkbox input:checked+div {
+.form_checkbox input:checked+div {
     background: url("../images/form_ok.jpg");
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.checkbox label {
+.form_checkbox label {
+    margin-left: 13px;
     font-size: 22px;
     color: #c6c6c6;
-    margin-left: 13px;
 }
 
 #submit {
-    background-color: #25cab1;
     width: 343px;
     height: 72px;
-    border-radius: 10px;
-    color: white;
     padding: 0;
-    line-height: 70px;
-    font-size: 32px;
-    text-align: center;
-    font-family: "ralewaybold";
-    letter-spacing: 1px;
     position: relative;
-    right: 33px;
+    left: 15px;
+    background-color: #25cab1;
+    border-radius: 10px;
+    font-family: "ralewaybold";
+    font-size: 32px;
+    color: #ffffff;
+    line-height: 70px;
+    text-align: center;
+    letter-spacing: 1px;
+    cursor: pointer;
 }
 
 /* CSS DO STOPKI */
 footer {
     width: 100%;
-    background-color: #ffffff;
-    margin-top: 30px;
     height: 100px;
+    margin-top: 30px;
+    background-color: #ffffff;
     color: #a1a1a1;
 }
 
@@ -639,12 +930,12 @@ footer>div {
 }
 
 footer>div>p {
-    text-align: left;
+    width: 66%;
+    margin: 0;
     font-size: 16px;
     letter-spacing: 1.5px;
+    text-align: left;
     line-height: 100px;
-    margin-left: 67px;
-    margin-right: 200px;
 }
 
 footer>div>div {
@@ -656,15 +947,16 @@ footer>div>div>img {
     width: 35px;
     height: 35px;
     margin-bottom: 10px;
-    margin-left: 4px;
+    margin-right: 4px;
 }
 
 footer>div>div>p {
+    margin-left: 55px;
+    font-family: "ralewaymedium";
+    font-size: 20px;
     letter-spacing: 1.25px;
     text-align: right;
-    font-size: 20px;
-    font-family: "ralewaymedium";
-    margin-left: 65px;
+    cursor: pointer;
 }
 
 footer>div>div span {
