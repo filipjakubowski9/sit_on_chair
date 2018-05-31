@@ -10,12 +10,11 @@ document.addEventListener("DOMContentLoaded", function() {
         dropdownMenu.style.display = "block";
     });
 
-    listEl[0].addEventListener("mouseout", function() {
+    listEl[0].addEventListener("mouseleave", function() {
         dropdownMenu.style.display = "none";
     });
 
 // HIDE/SHOW BLOCK
-
     var boxes = [...document.querySelectorAll(".clair, .margarita")];
     // console.log(boxes);
     var shadow = [...document.querySelectorAll(".shadow")];
@@ -28,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     boxes.forEach(function(el, i) {
-        el.addEventListener("mouseout", function() {
+        el.addEventListener("mouseleave", function() {
             shadow[i].style.display = "block";
         })
     });
@@ -44,11 +43,11 @@ document.addEventListener("DOMContentLoaded", function() {
     sliderElem[index].classList.add("visible");
 
     next.addEventListener("click", function() {
-        if (index >= 2) {
+        if (index >= sliderElem.length - 1) {
             sliderElem[index].classList.remove("visible");
             index = 0;
             sliderElem[index].classList.add("visible");
-        } else if (index <= 2) {
+        } else if (index <= sliderElem.length - 1) {
             sliderElem[index].classList.remove("visible");
             index++;
             sliderElem[index].classList.add("visible");
@@ -58,9 +57,9 @@ document.addEventListener("DOMContentLoaded", function() {
     prev.addEventListener("click", function() {
         if (index <= 0) {
             sliderElem[index].classList.remove("visible");
-            index = 2;
+            index = sliderElem.length - 1;
             sliderElem[index].classList.add("visible");
-        } else if (index <= 2) {
+        } else if (index <= sliderElem.length - 1) {
             sliderElem[index].classList.remove("visible");
             index--;
             sliderElem[index].classList.add("visible");
@@ -68,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 // KALKULATOR
-
     var listArrow = [...document.querySelectorAll(".list_arrow")];
     // console.log(listArrow);
     var listPanel = document.querySelectorAll(".list_panel");
@@ -83,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
-
 
     var options = [...document.querySelectorAll(".list_panel")];
     // console.log(options);
@@ -105,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var patternValue = document.querySelector(".panel_right .pattern_value");
     var transport = document.querySelector(".transport");
     var transportValue = document.querySelector(".panel_right .transport_value");
-
 
     function price() {
         var sum = document.querySelector(".sum");
@@ -179,11 +175,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-
-
-
 // CHECKBOX
-
     var checkbox = document.querySelector(".form_checkbox div");
     var input = document.querySelector(".form_checkbox input");
     // console.log(checkbox);
